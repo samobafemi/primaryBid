@@ -11,7 +11,7 @@ PageObject folder is the repository for all the elements and their locators for 
 Mochawesome-report folder contains the test report in html format.
 Videos folder contains the video of the test when it was ran headless. No video recording during the headed run of the test script.
 
-Use cyOpen at the terminal to run in headed mode, cyRun in headless mode and mochawesomeReport to run in heedless mode and get mochawesome report store in the mochawesome-report folder. Copy the link mochawesome.html and view in the browser.
+Use cyOpen at the terminal to run in headed mode, cyRun in headless mode and mochawesomeReport to run in heedless mode and get mochawesome report stored in the mochawesome-report folder. Copy the link mochawesome.html and view in the browser.
 
 Observations around the user experience(UX).
 
