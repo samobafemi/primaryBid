@@ -1,7 +1,7 @@
 import { testData } from "../pageObjects/index";
 class BasePage {
   visit() {
-    return cy.visit("https://playground.primarybid.com", {
+    return cy.visit(testData.Url, {
       auth: {
         username: testData.User1.username,
         password: testData.User1.password,
