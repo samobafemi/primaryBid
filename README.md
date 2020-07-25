@@ -5,7 +5,7 @@ The language used was Javascript.
 After clonning the repository, install the required dependencies: NPM, Cypress, Mocha, Mochawesome.
 
 The cypress folder contains Fixture folder, Integration folder, and I created a pageObject foledr.
-Fixture folder contian testData.json where I have all the test data used in the script.
+Fixtures folder contian testData.json where I have all the test data used in the script and datahelper.js used in the generation of random email address.
 Integration folder contains the primaryBid test suites which contains the test cases for the script.
 PageObject folder is the repository for all the elements and their locators for all the pages interracted with during the automation.
 Mochawesome-report folder contains the test report in html format.
