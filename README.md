@@ -1,7 +1,16 @@
 # primaryBid
-The project was created using cypress.io automation tool and ide used visual studio code. 
+
+The project was created using cypress.io automation tool and IDE used was visual studio code. 
 The language used was Javascript.
-After clonning the repository, install the required dependencies: NPM, cypress, mocha, mochawesome
+After clonning the repository, install the required dependencies: NPM, Cypress, Mocha, Mochawesome.
+
+The cypress folder contains Fixture folder, Integration folder, and I created a pageObject foledr.
+Fixture folder contian testData.json where I have all the test data used in the script.
+Integration folder contains the primaryBid test suites which contains the test cases for the script.
+PageObject folder is the repository for all the elements and their locators for all the pages interracted with during the automation.
+Mochawesome-report folder contains the test report in html format.
+Videos folder contains the video of the test when it was ran headless. No video recording during the headed run of the test script.
+
 Use cyOpen at the terminal to run in headed mode, cyRun in headless mode and mochawesomeReport to run in heedless mode and get mochawesome report store in the mochawesome-report folder. Copy the link mochawesome.html and view in the browser.
 
 Observations around the user experience(UX).
