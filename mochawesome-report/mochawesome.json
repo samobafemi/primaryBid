@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-25T11:41:27.681Z",
+    "end": "2020-07-25T11:43:55.464Z",
+    "duration": 147783,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ee5fe411-004c-4090-9341-c88268f1991e",
+      "title": "",
+      "fullFile": "cypress\\integration\\primaryBidScenarios.js",
+      "file": "cypress\\integration\\primaryBidScenarios.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ab8ce829-fb62-41b5-92bc-682e0c973d26",
+          "title": "PrimaryBid Test Suites",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate about us link in the header",
+              "fullTitle": "PrimaryBid Test Suites Validate about us link in the header",
+              "timedOut": null,
+              "duration": 24715,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_index.NavBar.aboutUsLink.click();\n_index.BasePage.getUrl().should(\"contain\", \"about\");",
+              "err": {},
+              "uuid": "5bb64e96-5ea4-4692-8368-cacbb2ee3005",
+              "parentUUID": "ab8ce829-fb62-41b5-92bc-682e0c973d26",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate FAQs link in the header",
+              "fullTitle": "PrimaryBid Test Suites Validate FAQs link in the header",
+              "timedOut": null,
+              "duration": 23879,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_index.NavBar.faqsLink.click();\n_index.BasePage.getUrl().should(\"contain\", \"faqs\");",
+              "err": {},
+              "uuid": "079e0909-6949-42df-8b9f-ed24f13fda63",
+              "parentUUID": "ab8ce829-fb62-41b5-92bc-682e0c973d26",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate News link in the header",
+              "fullTitle": "PrimaryBid Test Suites Validate News link in the header",
+              "timedOut": null,
+              "duration": 32719,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_index.NavBar.newsLink.click();\n_index.BasePage.getUrl().should(\"contain\", \"news\"); // The news page contains news items for ‘Featured Content’\n\n_index.NewsPage.featuredContent.should(\"exist\").and(\"be.visible\"); // The news page contains news items for ‘All Content’\n\n_index.NewsPage.allContent.should(\"exist\").and(\"be.visible\"); // The ‘All Content’ section can be filtered to ‘Webinar'\n\n_index.NewsPage.filterBy.trigger(\"mouseover\");\n_index.NewsPage.filterPopup.invoke(\"show\").find(\"[data-testid=news-filter-checkbox-Webinar] > .pb_news_filter__checkbox_iEUe\").wait(2000).click();\n_index.NewsPage.filteredBody.should(\"contain\", \"Webinar\");",
+              "err": {},
+              "uuid": "e162d94f-c076-4913-9c7f-a5da3ce1a301",
+              "parentUUID": "ab8ce829-fb62-41b5-92bc-682e0c973d26",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate Sign Up button in the header",
+              "fullTitle": "PrimaryBid Test Suites Validate Sign Up button in the header",
+              "timedOut": null,
+              "duration": 20369,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_index.NavBar.signUp.click();\n_index.BasePage.getUrl().should(\"contain\", \"signup\"); // Test data submitted to the sign up form navigates to the user details page\n\n_index.SignUpPage.signUp(_index.DataHelper.getRandomEmail(), _index.testData.SignUpPassword, _index.testData.SignUpPassword);\n_index.BasePage.getUrl().should(\"contain\", \"/personal-details?step=2\");",
+              "err": {},
+              "uuid": "aa0c5d07-18bc-44c1-beb4-55e12c3741b3",
+              "parentUUID": "ab8ce829-fb62-41b5-92bc-682e0c973d26",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sign up with password not matching",
+              "fullTitle": "PrimaryBid Test Suites Sign up with password not matching",
+              "timedOut": null,
+              "duration": 18812,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_index.NavBar.signUp.click();\n_index.BasePage.getUrl().should(\"contain\", \"signup\");\n_index.SignUpPage.signUp(_index.DataHelper.getRandomEmail(), _index.testData.SignUpPassword, _index.testData.wrongPassword);\n_index.SignUpPage.errorMessage.should(\"exist\").and(\"contain\", \"Passwords do not match\");",
+              "err": {},
+              "uuid": "812d40b7-2a99-4805-b47f-0bf3ba53d504",
+              "parentUUID": "ab8ce829-fb62-41b5-92bc-682e0c973d26",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sign up with invalid email address",
+              "fullTitle": "PrimaryBid Test Suites Sign up with invalid email address",
+              "timedOut": null,
+              "duration": 20052,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_index.NavBar.signUp.click();\n_index.BasePage.getUrl().should(\"contain\", \"signup\");\n_index.SignUpPage.signUp(_index.testData.invalidEmail, _index.testData.SignUpPassword, _index.testData.SignUpPassword);\n_index.SignUpPage.errorMessage.should(\"exist\").and(\"contain\", \"The email you have entered is not valid\");",
+              "err": {},
+              "uuid": "5e32efb8-4cf0-44ab-b350-6877b69d33ee",
+              "parentUUID": "ab8ce829-fb62-41b5-92bc-682e0c973d26",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5bb64e96-5ea4-4692-8368-cacbb2ee3005",
+            "079e0909-6949-42df-8b9f-ed24f13fda63",
+            "e162d94f-c076-4913-9c7f-a5da3ce1a301",
+            "aa0c5d07-18bc-44c1-beb4-55e12c3741b3",
+            "812d40b7-2a99-4805-b47f-0bf3ba53d504",
+            "5e32efb8-4cf0-44ab-b350-6877b69d33ee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 140546,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
